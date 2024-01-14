@@ -1,0 +1,20 @@
+<h1>Olvidaste contraseña</h1>
+
+<p>Ingresa tu correo</p>
+<form action="/api/sessions/forgot-password" method="post">
+    <input type="email" name="email" placeholder="Ingresa tu correo">
+    <br/>
+    <button>Enviar link a mi correo</button>
+
+</form>
+
+<h2>Reestablece contraseña</h2>
+
+<p style="color: red">{{error}}</p>
+<br>
+<p>Ingresa tu nueva constraseña</p>
+
+<form action="/api/sessions/reset-password?token={{token}}" method="post">
+    <input type="password" name="newPassword" placeholder="Ingresa tu nueva contraseña">
+    <button>Reestablecer Contraseña</button>
+</form>
